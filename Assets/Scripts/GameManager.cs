@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class GameManager : MonoBehaviour
 {
     public GameObject deathEffect;
-    public Vector3 respawnPosition;
+    public Vector3 respawnPosition ;
 
     public int currentCoins;
 

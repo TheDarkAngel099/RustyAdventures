@@ -382,6 +382,14 @@
 "Assets/Scripts/KillPlayer.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/UIManager.cs"
+"Assets/Water/Water/Scripts/Displace.cs"
+"Assets/Water/Water/Scripts/GerstnerDisplace.cs"
+"Assets/Water/Water/Scripts/MeshContainer.cs"
+"Assets/Water/Water/Scripts/PlanarReflection.cs"
+"Assets/Water/Water/Scripts/SpecularLighting.cs"
+"Assets/Water/Water/Scripts/Water.cs"
+"Assets/Water/Water/Scripts/WaterBase.cs"
+"Assets/Water/Water/Scripts/WaterTile.cs"
 -langversion:9.0
 
 /deterministic
