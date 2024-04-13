@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
 
-    public float moveSpeed ; // The speed the player will move.
+    public float moveSpeed ;
     public float jumpForce;
     public float bounceForce;
     public float gravityScale = 5f;
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
 
     public bool isKnocking;
+    public bool stopMove;
     public float knockBackLength = 0.5f;
     private float kncockBackCounter;
     public Vector2 knockBackPower;
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(! isKnocking)
+        if(! isKnocking && !stopMove )
         {
 
         float yStore = moveDirection.y; 
@@ -100,6 +101,13 @@ public class PlayerController : MonoBehaviour
             if (kncockBackCounter <= 0 )
             {
                 isKnocking = false;
+            }
+
+            if(stopMove)
+            {
+                moveDirection = Vector3.zero;
+                moveDirection.y += Physics.gravity.y * gravityScale * Time.deltaTime;
+                charController.Move(moveDirection);
             }
             
             anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z) );

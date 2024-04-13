@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class GameManager : MonoBehaviour
     public Vector3 respawnPosition ;
 
     public int currentCoins;
+    public int levelEndMusic = 8;
+
+    public string nextLevelToLoad;
 
     void Awake()
     {
@@ -101,5 +105,17 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             
         }
+    }
+
+
+    public IEnumerator LevelEndCo()
+    {
+        AudioManager.instance.PlayMusic(levelEndMusic);
+        PlayerController.instance.stopMove = true;
+        yield return new WaitForSeconds(2f);
+        Debug.Log("Level Ended");
+
+        SceneManager.LoadScene(nextLevelToLoad);
+
     }
 }

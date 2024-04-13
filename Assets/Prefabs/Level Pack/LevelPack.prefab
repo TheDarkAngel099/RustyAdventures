@@ -2680,6 +2680,10 @@ PrefabInstance:
       propertyPath: healthBarImages.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 9704dbb03d7288b4e9f0e15525db38d1, type: 3}
+    - target: {fileID: 6788051587926839781, guid: 24b88611b12105b42b192d3b2c7ecb7f, type: 3}
+      propertyPath: nextLevelToLoad
+      value: Level 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

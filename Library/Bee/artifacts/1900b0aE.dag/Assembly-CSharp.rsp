@@ -380,6 +380,7 @@
 "Assets/Scripts/HurtEnemy.cs"
 "Assets/Scripts/HurtPlayer.cs"
 "Assets/Scripts/KillPlayer.cs"
+"Assets/Scripts/LevelExit.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/UIManager.cs"
 "Assets/Water/Water/Scripts/Displace.cs"
