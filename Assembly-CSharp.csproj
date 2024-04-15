@@ -68,10 +68,12 @@
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\Water\Water\Scripts\SpecularLighting.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect\LSCamera.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\LevelExit.cs" />
     <Compile Include="Assets\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\Scripts\HealthPickup.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Water\Water\Scripts\GerstnerDisplace.cs" />
     <Compile Include="Assets\Water\Water\Scripts\WaterBase.cs" />
@@ -84,10 +86,12 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\KillPlayer.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect\LSLevelEntry.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Water\Water\Scripts\Displace.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect\LSResetpos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

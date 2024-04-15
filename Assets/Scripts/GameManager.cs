@@ -112,8 +112,10 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayMusic(levelEndMusic);
         PlayerController.instance.stopMove = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         Debug.Log("Level Ended");
+
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
         SceneManager.LoadScene(nextLevelToLoad);
 

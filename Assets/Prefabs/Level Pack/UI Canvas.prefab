@@ -197,6 +197,8 @@ MonoBehaviour:
   optionsScreen: {fileID: 9109488733992905501}
   musicVolumeSlider: {fileID: 8326748841749390202}
   sfxVolumeSlider: {fileID: 6134297240154238369}
+  levelSelect: LevelSelect
+  mainMenu: MainMenu
 --- !u!1 &961855229676711652
 GameObject:
   m_ObjectHideFlags: 0

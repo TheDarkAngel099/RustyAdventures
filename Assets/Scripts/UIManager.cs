@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class UIManager : MonoBehaviour
 
     public Slider musicVolumeSlider;
     public Slider sfxVolumeSlider;
+    public string levelSelect, mainMenu;
 
 
 
@@ -78,12 +80,15 @@ public class UIManager : MonoBehaviour
     }
     public void LevelSelect()
     {
+        SceneManager.LoadScene(levelSelect);
+        Time.timeScale =1;
 
     }
 
     public void MainMenu()
     {
-
+        SceneManager.LoadScene(mainMenu);
+        Time.timeScale =1;
     }
 
     public void SetMusicLevel()
