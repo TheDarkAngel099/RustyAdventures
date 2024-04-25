@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Level 1
   levelToCheck: 
-  mapPointActive: {fileID: 6875952510138773896}
+  mapPointActive: {fileID: 5088135570229024152}
   mapPointInactive: {fileID: 6875952510138773896}
 --- !u!135 &2620685836946919053
 SphereCollider:

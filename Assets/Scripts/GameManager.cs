@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int levelEndMusic = 8;
 
     public string nextLevelToLoad;
+    public bool isRespawning;
 
     void Awake()
     {
@@ -60,6 +61,8 @@ public class GameManager : MonoBehaviour
         Instantiate(deathEffect, PlayerController.instance.transform.position + new Vector3(0f,1f,0f), PlayerController.instance.transform.rotation);
 
         yield return new WaitForSeconds(1f);
+
+        isRespawning = true;
 
         HealthManager.instance.ResetHealth();
         UIManager.instance.fadeFromBlack = true;
@@ -112,10 +115,25 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayMusic(levelEndMusic);
         PlayerController.instance.stopMove = true;
-        yield return new WaitForSeconds(4f);
+        UIManager.instance.fadeToBlack = true;
+
+        yield return new WaitForSeconds(3f);
         Debug.Log("Level Ended");
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
+        
+        if(PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_coins"))
+        {
+            if(currentCoins > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_coins") )
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_coins" , currentCoins);
+            }
+
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_coins" , currentCoins);
+        }
 
         SceneManager.LoadScene(nextLevelToLoad);
 
