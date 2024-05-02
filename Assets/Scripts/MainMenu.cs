@@ -21,6 +21,11 @@ public class MainMenu : MonoBehaviour
         {
             ResetProgress();
         }
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+
     }
 
     // Update is called once per frame
