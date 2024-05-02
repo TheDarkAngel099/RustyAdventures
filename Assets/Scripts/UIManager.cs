@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject pausedScreen;
     public GameObject optionsScreen;
+    public GameObject controlsScreen;
 
     public Slider musicVolumeSlider;
     public Slider sfxVolumeSlider;
@@ -101,4 +102,15 @@ public class UIManager : MonoBehaviour
         AudioManager.instance.SetSFXLevel();
 
     }
+
+     public void OpenControls()
+    {
+        controlsScreen.SetActive(true);
+    }
+
+    public void ColseControls()
+    {
+        controlsScreen.SetActive(false);
+    }
+
 }
